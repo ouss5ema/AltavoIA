@@ -44,3 +44,14 @@ venv/
 # Other
 *.bak
 *.tmp
+
+# Secret files
+.env
+.env.*
+config.json
+*.secret*
+*.key*
+*.pem
+*.crt
+*.p12
+*.pfx
