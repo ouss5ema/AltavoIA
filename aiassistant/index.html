@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OVH RAG Chatbot</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px auto;
+      max-width: 600px;
+    }
+    #response {
+      white-space: pre-wrap;
+      background-color: #f4f4f4;
+      padding: 1em;
+      border-radius: 10px;
+      margin-top: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      border: none;
+      background-color: #0074D9;
+      color: white;
+      font-size: 1em;
+    }
+    input {
+      padding: 0.5em;
+      width: 80%;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 OVH RAG Chatbot</h1>
+
+  <input id="question" placeholder="Ask me something..." />
+  <button onclick="ask()">Ask</button>
+
+  <div id="response"></div>
+
+  <script>
+    async function ask() {
+      const question = document.getElementById("question").value;
+      const resBox = document.getElementById("response");
+      resBox.innerText = "⏳ Thinking...";
+
+      const response = await fetch("http://127.0.0.1:8000/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ question })
+      });
+
+      const data = await response.json();
+      resBox.innerText = `🧠 Mode: ${data.mode}\n\n🤖 ${data.response}`;
+    }
+  </script>
+</body>
+</html>

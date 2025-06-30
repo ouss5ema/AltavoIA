@@ -1,0 +1,9 @@
+OVHcloud AI Endpoints provide an easy and scalable way to deploy and use powerful AI models through APIs. With support for popular models such as Mistral and BGE, users can build intelligent applications without managing complex infrastructure.
+
+The Retrieval-Augmented Generation (RAG) approach enhances chatbots by allowing them to retrieve and include relevant document information in their responses. This enables better contextual understanding and more accurate answers.
+
+RAG is especially useful in customer support, documentation search, and enterprise Q&A systems. It combines document retrieval and language modeling into a single pipeline.
+
+LangChain is a framework that simplifies building RAG systems. It allows developers to load documents, split them into chunks, embed them into a vector store, and query them in real-time.
+
+Chroma is one of the vector databases that can be used to store document embeddings and perform similarity search efficiently.
