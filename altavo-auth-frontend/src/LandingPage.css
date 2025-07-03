@@ -1,0 +1,37 @@
+.landing-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
+.landing-cta-secondary {
+  background: #fff;
+  color: #23589C;
+  border: 2px solid #6EC6E6;
+  border-radius: 24px;
+  padding: 12px 38px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(35, 88, 156, 0.06);
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-top: 0;
+}
+.landing-cta-secondary:hover {
+  background: #6EC6E6;
+  color: #fff;
+  border: 2px solid #23589C;
+}
+@media (max-width: 600px) {
+  .landing-btns {
+    width: 100%;
+    align-items: stretch;
+  }
+  .landing-cta,
+  .landing-cta-secondary {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+} 
